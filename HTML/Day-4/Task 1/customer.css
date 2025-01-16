@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.childContainer {
+
+    width: 100px;
+    height: 100px;
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    border: 1px solid black;
+}
+
+.main {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.container .navbar {
+    height: 10%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.navbar {
+    height: 10%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.childContainer .sidebar div {
+    border: 1px solid black;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+}
+.childContainer .sidebar div a{
+    text-decoration: none;
+    color: black;
+}
+
+.childContainer .sidebar div:hover {
+    background-color: lightblue;
+    color: white;
+    cursor: pointer;
+    border-color: aqua;
+    border: 2px solid aqua;
+}
+
+.childContainer .sidebar div a:visited{
+    background-color: lightblue;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#profile:hover {
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.childContainer .main .heading h1 {
+    margin-left: 65px;
+    font-style: italic;
+}
+
+.button-container .searchbar {
+    display: flex;
+    height: 30px;
+    width: 300px;
+    border: 1px solid black;
+    /* margin-left: 50px; */
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.button-container .statusbar {
+    display: flex;
+    height: 30px;
+    width: 300px;
+    border: 1px solid black;
+    /* margin-left: 400px; */
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.button-container .addCustomerButton button {
+    display: flex;
+    background-color: lightgreen;
+    height: 40px;
+    width: 170px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+     cursor: pointer;
+
+}
+
+.tableClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    height: 50px;}
+
+tr,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    height: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 64px;
+}
+.pagination button{
+    margin-top: 10px;
+    height: 30px;
+    width: 60px;
+}
+.pagination button:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Style for the Edit and Delete icons in the table */
+.tableClass i {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Edit icon */
+.tableClass i.fa-pen-to-square {
+    color: #4CAF50; /* Green color */
+}
+
+.tableClass i.fa-pen-to-square:hover {
+    background-color: #e8f5e9; /* Light green on hover */
+    color: #388E3C; /* Dark green on hover */
+}
+
+/* Delete icon */
+.tableClass i.fa-trash {
+    color: #f44336; /* Red color */
+}
+
+.tableClass i.fa-trash:hover {
+    background-color: #ffebee; /* Light red on hover */
+    color: #d32f2f; /* Dark red on hover */
+}
+
+/* Optionally, you can add a margin to space out the icons */
+.tableClass td i {
+    margin-right: 10px;
+}

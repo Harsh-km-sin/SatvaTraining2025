@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+        table{
+            margin: auto;
+            border: 1px solid black;
+        }
+        td {
+            word-break: break-word;
+            white-space: normal;
+        }
+
+        tr,td{
+            border: 1px solid black;
+        }
+        .center {
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            font-size: large;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ian's Timetable</h1>
+    <table>
+        <tr>
+            <td style="width: 65px;"></td>
+            <td style="width: 75px;"></td>
+            <td colspan="3">Morning</td>
+            <td>Lunch</td>
+            <td colspan="4" style="width: 200px;">Afternoon</td>
+            <td colspan="3" style="width: 25px;">Evening</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="center" style="width: 50px;">9-10 am</td>
+            <td class="center" style="width: 50px;">10-11 am</td>
+            <td class="center" style="width: 50px;">11-12 am</td>
+            <td class="center" style="width: 45px;">1-2 pm</td>
+            <td class="center" style="width: 45px;">2-3 <br>pm</td>
+            <td class="center" style="width: 45px;">3-4 <br> pm</td>
+            <td class="center" style="width: 45px;">4-5 <br> pm</td>
+            <td class="center" style="width: 45px;">5-6 <br>pm</td>
+            <td class="center" style="width: 20px;">6-7 pm</td>
+            <td class="center" style="width: 20px;">7-8 pm</td>
+            <td class="center" style="width: 20px;">8-9 pm</td>
+        </tr>
+        <tr>
+            <td class="center" rowspan="2">Work</td>
+            <td class="center">Monday</td>
+            <td class="center" colspan="3">Development Meeting</td>
+            <td></td>
+            <td class="center" colspan="3">Client Meeting</td>
+            <td class="center">Commute</td>
+            <td class="center" colspan="3">Free</td>
+        </tr>
+        <tr>
+            <td class="center">Tuesday</td>
+            <td class="center" colspan="3">in Office</td>
+            <td></td>
+            <td class="center" colspan="7">in Office</td>
+        </tr>
+        <tr>
+            <td class="center" rowspan="2">Lecture</td>
+            <td class="center">Wednesday</td>
+            <td class="center" colspan="3">CSC 205</td>
+            <td class="center"></td>
+            <td class="center" colspan="7">preparation</td>
+        </tr>
+        <tr>
+            <td class="center">Thursday</td>
+            <td class="center" colspan="3">MAM200</td>
+            <td class="center"></td>
+            <td class="center" colspan="3">Tutorials for MAM200</td>
+            <td class="center" colspan="4">Free</td>
+        </tr>
+        <tr>
+            <td class="center">Research</td>
+            <td class="center">Friday</td>
+            <td class="center" colspan="3">Research</td>
+            <td></td>
+            <td class="center" colspan="7">Research</td>
+        </tr>
+    </table>
+</body>
+
+</html>

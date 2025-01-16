@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Attributes Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .link-container {
+            margin-bottom: 20px;
+        }
+        .link-container a {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .link-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding target="_top", target="_parent", and target="_self"</h1>
+
+    <p>This page demonstrates the difference between the three target attributes:</p>
+
+    <div class="link-container">
+        <h2>Links with different target attributes</h2>
+        <p><strong>Target="_self":</strong> Opens the link in the same window/tab (default behavior).</p>
+        <a href="https://www.example.com" target="_self">Open Example in the Same Tab</a>
+        
+        <p><strong>Target="_parent":</strong> Opens the link in the parent frame (if in an iframe).</p>
+        <a href="https://www.example.com" target="_parent">Open Example in Parent</a>
+        
+        <p><strong>Target="_top":</strong> Opens the link in the full body of the window, removing any frames.</p>
+        <a href="https://www.example.com" target="_top">Open Example in Full Window</a>
+    </div>
+
+</body>
+</html>

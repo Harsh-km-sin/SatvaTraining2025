@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    height: 100%;
+    max-height: 90vh;
+}
+td {
+    border: 1px inset rgb(215, 214, 214);
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(171, 204, 221, 255);
+}
+img {
+    width: 150px;
+    height: 120px;
+    border: 2px solid blue;
+}
+.cell-first-heigth{
+    height: 10px;
+    color: blue;
+    font-weight: 700;
+}

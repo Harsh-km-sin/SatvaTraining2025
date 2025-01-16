@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="card">
+        <h1>Fill the details below</h1>
+        <form class="form" id="detailsForm">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" onblur="toCapital()" />
+
+            <label for="email" onmouseover="this.style.backgroundColor='yellow';this.style.color='black'">Enter your
+                email: </label>
+            <input type="text" name="email" id="email" />
+
+            <label for="Contact">Enter your Phone no.: </label>
+            <input type="text" name="contact" id="contact" onchange="alert('Text changed!')" />
+
+            <label for="Address">Enter your Current Address: </label>
+            <input type="text" name="Address" id="address" onfocus="toYellow(this.id)" />
+
+            <fieldset>
+                <legend>Select Your Gender</legend>
+                <label><input type="radio" name="radio" value="yes" /> Male</label>
+                <label><input type="radio" name="radio" value="no" /> Female</label>
+            </fieldset>
+
+            <button type="submit" onclick="alert('Button Clicked!')">Submit</button>
+        </form>
+    </div>
+    <a class="center" href="./usingTwoTables.html"><img
+            src="https://imgs.search.brave.com/NwB0_4iSjJTmjBe1mtdulzod9mmRf251eeT-TYEPioc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzMwLzc5LzE1/LzM2MF9GXzUzMDc5/MTU1N19UOGhOaGFy/QlFRSnFtdzBSMkZS/akNyQzlDZ053YWV1/aS5qcGc"
+            alt="right arrow" width="50px"></a>
+
+    <script>
+        function toCapital() {
+            let x = document.getElementById("name");
+            x.value = x.value.toUpperCase();
+        }
+
+        function toYellow(x) {
+            document.getElementById(x).style.background = "yellow";
+            document.getElementById(x).style.color = "black";
+
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- HTML Events
+    onclick
+    onmouseover
+    onblur
+    onchange
+    onfocus -->

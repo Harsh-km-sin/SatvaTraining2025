@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            margin: auto;
+            border-collapse: collapse;
+            width: 60%;
+            height: 40vh;
+        }
+        tr,td{
+            border: 2px solid black;
+            font-size: large;
+        }
+        h1{
+            text-align: center;
+            margin: 20px;
+            font-size: medium;
+            color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Invoice</h1>
+    <table>
+        <tr style="background-color: lightgray; font-weight: bold;">
+            <td style="width: 25%;">Item/Desc.</td>
+            <td style="width: 25%;">Qty.</td>
+            <td style="width: 25%;">@</td>
+            <td style="width: 25%;">Price</td>
+        </tr>
+        <tr>
+            <td>Paperclips (Box)</td>
+            <td>100</td>
+            <td>1.15</td>
+            <td>115.00</td>
+        </tr>
+        <tr>
+            <td>Paper (Case)</td>
+            <td>10</td>
+            <td>45.99</td>
+            <td>459.90</td>
+        </tr>
+        <tr>
+            <td>Wastepaper <br> Baskets</td>
+            <td>2</td>
+            <td>17.99</td>
+            <td>35.98</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="background-color: lightgray; font-weight: bold;">Subtotal</td>
+            <td>610.88</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: lightgray; font-weight: bold;">Tax</td>
+            <td>7%</td>
+            <td>42.76</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="background-color: lightgray; font-weight: bold;">Total</td>
+            <td>653.64</td>
+        </tr>
+    </table>
+</body>
+</html>
+

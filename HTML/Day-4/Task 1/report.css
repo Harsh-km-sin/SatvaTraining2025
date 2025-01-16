@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.childContainer {
+
+    width: 100px;
+    height: 100px;
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    border: 1px solid black;
+}
+
+.main {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.container .navbar {
+    height: 10%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.navbar {
+    height: 10%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.childContainer .sidebar div {
+    border: 1px solid black;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+}
+.childContainer .sidebar div a{
+    text-decoration: none;
+    color: black;
+}
+
+.childContainer .sidebar div:hover {
+    background-color: lightblue;
+    border-color: aqua;
+    border: 2px solid aqua;
+    color: white;
+    cursor: pointer;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#profile:hover {
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.childContainer .main .heading h1 {
+    margin-left: 65px;
+    font-style: italic;
+}
+
+#paraText{
+    display: inline-block;
+}
+
+.textButtonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.textButtonContainer .textClass{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 40px;
+}
+.textButtonContainer .buttonClass{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+.buttonClass button{
+    background-color: lightblue;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.reportTable{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 69vh;
+}
+table{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-collapse: collapse;
+    width: 90%;
+    text-align: center;
+
+}
+tr,td{
+    border: 1px solid black;
+}

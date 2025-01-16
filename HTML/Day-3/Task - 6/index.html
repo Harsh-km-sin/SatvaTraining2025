@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add_circle" />
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Zoho Books</div>
+            <nav>
+                <ul>
+                    <li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                    <li><i class="fas fa-box"></i> Items</li>
+                    <li><i class="fas fa-university"></i> Banking</li>
+                    <li><i class="fas fa-dollar-sign"></i> Sales</li>
+                    <li><i class="fas fa-users"></i> Customers</li>
+                    <li><i class="fas fa-file-invoice"></i> Retailer Invoices</li>
+                    <li><i class="fas fa-file-alt"></i> Invoices</li>
+                    <li><i class="fas fa-money-bill-wave"></i> Payments Received</li>
+                    <li><i class="fas fa-sync"></i> Recurring Invoices</li>
+                    <li><i class="fas fa-sticky-note"></i> Credit Notes</li>
+                    <li><i class="fas fa-shopping-cart"></i> Purchases</li>
+                    <li><i class="fas fa-clock"></i> Time Tracking</li>
+                    <li><i class="fas fa-file-invoice-dollar"></i> e-Way Bills</li>
+                    <li><i class="fas fa-file-alt"></i> GST Filing</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+               
+                <div class="header-left">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-rotate"></i>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search in Customers">
+                </div>
+                <div class="dropdown">
+                    <label for="dropdown">Satva Solutions</label>
+                    <img src="https://cdn-icons-png.flaticon.com/128/10728/10728680.png" alt="drop-down" width="15px">
+                </div>
+                <div class="header-right">
+                    <i class="fas fa-user"></i> 
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-question"></i>
+
+                    <div class="user-profile">
+                        <img src="https://via.placeholder.com/32" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="page-header">
+                    <h1>New Customer</h1>
+                    <button class="page-tips"><i class="fas fa-lightbulb"></i> Page Tips</button>
+                </div>
+
+                <form class="customer-form">
+                    <div class="customer-type">
+                        <label style="font-weight: 600;">Customer Type</label>
+                        <div class="radio-group">
+                            <input type="radio" id="business" name="customer-type" checked>
+                            <label for="business">Business</label>
+                            <input type="radio" id="individual" name="customer-type">
+                            <label for="individual">Individual</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Primary Contact</label>
+                        <div class="input-group">
+                            <select name="salutation" required>
+                                <option value="">Salutation</option>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs.">Mrs.</option>
+                                <option value="Ms.">Ms.</option>
+                            </select>
+                            <input type="text" placeholder="First Name" required autofocus>
+                            <input type="text" placeholder="Last Name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Company Name</label>
+                        <input class="input-box1" type="text" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Customer Display Name*</label>
+                        <input class="input-box2" type="text" required>
+                        <i class="fas fa-question-circle help-icon"></i>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Customer Email</label>
+                        <input class="input-box3" type="email" required>
+                        <i class="fas fa-question-circle help-icon"></i>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Customer Phone</label>
+                        <div class="phone-inputs">
+                            <input class="input-box4" type="tel" placeholder="Work Phone" required>
+                            <input type="tel" placeholder="Mobile">
+                        </div>
+                        <i class="fas fa-question-circle help-icon"></i>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Website</label>
+                        <input class="input-box5" type="url">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-save">Save</button>
+                        <button type="button" class="btn-cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

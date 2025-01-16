@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #submit1, #submit2{
+      background-color: lightblue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>Two Submit Buttons with Different Actions</h2>
+
+  <div class="container">
+    <div class="form-container">
+      <form id="updateForm">
+        <label id="submitText">Submit Form</label>
+        <label id="fnameText" for="inputValue">Firstname</label>
+        <input type="text" id="inputValue" name="inputValue" required>
+        <br/>
+        <div id="button-container">
+            <input type="submit" id="submit1" value="Submit1"></button>
+            <input type="submit" id="submit2" value="Submit2"></button>
+          </div>
+      </form>
+    </div>
+
+    <div class="table-container">
+      <table id="dynamicTable">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Submitted Via</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    
+    const updateForm = document.getElementById('updateForm');
+
+    updateForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+    })
+
+    document.getElementById('submit1').addEventListener('click', function () {
+      const inputValue = document.getElementById('inputValue').value;
+      if (inputValue) {
+        addRow(inputValue, 'Submit 1');
+      } else {
+        alert('Please enter a value.');
+      }
+    });
+
+    document.getElementById('submit2').addEventListener('click', function () {
+      const inputValue = document.getElementById('inputValue').value;
+      if (inputValue) {
+        addRow(inputValue, 'Submit 2');
+      } else {
+        alert('Please enter a value.');
+      }
+    });
+
+    function addRow(value, buttonLabel) {
+      const tableBody = document.getElementById('dynamicTable').querySelector('tbody');
+      
+      const newRow = tableBody.insertRow();
+      
+      const dataCell = newRow.insertCell(0);
+      dataCell.textContent = value;
+      
+      const buttonCell = newRow.insertCell(1);
+      buttonCell.textContent = `${buttonLabel}`;
+    }
+  </script>
+</body>
+</html>

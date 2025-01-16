@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-spacing: 0;
+    border: 1px solid rgba(87, 86, 86, 0.371);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 60%;
+    height: 350px;
+    text-align: center;
+    margin-bottom: 140px;
+}
+
+td {
+    border: 1px solid rgba(47, 46, 46, 0.371);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 550;
+    font-size: large;
+}
+
+
+.container {
+    width: 100%;
+    height: 500px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-align {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.black-colour {
+    background-color: rgb(29, 28, 28);
+    color: white;
+}
+
+.azure-color {
+    background-color: rgb(206, 206, 206);
+}
+
+.white-color {
+    background-color: white;
+}
+
+.orange-color {
+    background-color: rgb(223, 112, 33);
+}

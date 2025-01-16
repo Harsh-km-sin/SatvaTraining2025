@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 4</title>
+</head>
+<body>
+
+  <div id="external-content"></div>
+
+  <script>
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; 
+
+    fetch(proxyUrl + 'https://satvasolutions.com/career/')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        const container = document.getElementById('external-content');
+        container.innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Fetch Error:', error);
+        const container = document.getElementById('external-content');
+        container.innerHTML = "<p>Failed to load external content. Error: " + error + "</p>";
+      });
+  </script>
+
+</body>
+</html>

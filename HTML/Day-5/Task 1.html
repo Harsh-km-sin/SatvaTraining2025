@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        body {
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+        }
+
+        .headingText {
+            text-align: right;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 20px 20px 0 20px;
+            color: brown;
+            text-decoration: underline;
+        }
+
+        .registrationForm {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px 0;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            text-align: left;
+            width: 10%;
+        }
+
+        td:last-child {
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .checkbox-group label {
+            display: block;
+            margin: 5px 0;
+        }
+
+
+        .inline-input {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headingText">
+        Student Registration Form
+    </div>
+
+    <div class="registrationForm">
+        <form action="#">
+
+            <table>
+                <tr>
+                    <td><label for="fname">First name:</label></td>
+                    <td><input type="text" name="fname" id="fname" placeholder="Enter your first name" autofocus
+                            required pattern="[a-zA-Z]+" title="Only alphabets are allowed"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last name:</label></td>
+                    <td><input type="text" name="fname" id="fname" placeholder="Enter your last name" autofocus
+                            required pattern="[a-zA-Z]+" title="Only alphabets are allowed"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" id="email" pattern="^[^.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$"
+                            placeholder="it should contain @"  required></td>
+                </tr>
+                <tr>
+                    <td><label for="mobile">Mobile:</label></td>
+                    <td><input type="text" name="mobile" id="mobile" pattern="^[0-9]{10}$" inputmode="numeric"
+                            placeholder="Only 10 digits are allowed" required></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>
+                        <div class="inline-input">
+                            <input type="radio" id="male" name="gender" value="Male"> Male
+                            <input type="radio" id="female" name="gender" value="Female" style="margin-left: 20px;">
+                            Female
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" name="dob" id="dob" required></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea name="address" id="address" cols="30" rows="5" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td><input type="text" name="city" id="city" required></td>
+                </tr>
+                <tr>
+                    <td><label for="pincode">Area Pin:</label></td>
+                    <td><input type="text" id="pincode" name="pincode" pattern="^[1-9][0-9]{5}$" inputmode="numeric"
+                            placeholder="Enter 6-digit PIN code" required></td>
+                </tr>
+                <tr>
+                    <td><label for="state">State:</label></td>
+                    <td><input type="text" name="state" id="state" required></td>
+                </tr>
+                <tr>
+                    <td><label for="qualifications">Qualifications:</label></td>
+                    <td>
+                        <select name="qualifications" id="qualifications" required>
+                            <option value="" disabled selected>Select Qualification</option>
+                            <option value="ug">UG</option>
+                            <option value="pg">PG</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="specialization">Specialization:</label></td>
+                    <td class="checkbox-group">
+                        <label><input type="checkbox" id="specialization1" name="specialization1"
+                                value="Computer Science" > Computer Science</label>
+                        <label><input type="checkbox" id="specialization2" name="specialization2"
+                                value="Information Technology" > Information Technology</label>
+                        <label><input type="checkbox" id="specialization3" name="specialization3"
+                                value="Computer Architecture" > Computer Architecture</label>
+                        <label><input type="checkbox" id="specialization4" name="specialization4"
+                                value="Tele Communication" > Tele Communication</label>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" name="password" id="password"
+                            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
+                            placeholder="must contain at least 1 upperase, lowercase, number, specialcharacter, MinLength is 8"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Register">
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

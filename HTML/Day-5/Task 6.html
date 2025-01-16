@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+<body>
+
+    <h2>File Download</h2>
+    <a href="sample.txt" download>
+        Download
+    </a>
+
+    <br><br>
+
+    <h2>File Upload (Excel Only)</h2>
+    <form id="fileUploadForm">
+        <label for="uploadFile">Choose Excel File:</label>
+        <input type="file" id="uploadFile" accept=".xlsx,.xls">
+        <button type="submit">Upload</button>
+    </form>
+
+    <div id="uploadResult"></div>
+
+    <script>
+        const form = document.getElementById('fileUploadForm');
+        const uploadResult = document.getElementById('uploadResult');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById('uploadFile');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const fileExtension = file.name.split('.').pop().toLowerCase();
+                if (fileExtension === 'xlsx' || fileExtension === 'xls') {
+                    uploadResult.textContent = 'File uploaded successfully!';
+                } else {
+                    uploadResult.textContent = 'Only Excel files (.xlsx or .xls) are allowed!';
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
