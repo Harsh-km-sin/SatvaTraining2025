@@ -108,9 +108,7 @@
             const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
             const inputs = form.querySelectorAll('input[required], select[required]');
 
-            // Add event listeners to inputs for dynamic validation classes
             inputs.forEach(input => {
-                // Initially, no state is applied
                 input.addEventListener('input', function () {
                     input.classList.remove('is-invalid', 'is-valid');
                 });
