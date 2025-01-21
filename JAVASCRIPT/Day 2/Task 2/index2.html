@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <style>
+        .error-icon {
+            color: red;
+            font-size: 0.9rem;
+        }
+
+        .valid-icon {
+            color: green;
+        }
+
+        .carousel-item {
+            width: 100%;
+            height: 400px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+
+        .btn {
+            margin: 0 5px;
+        }
+
+        .edit-button {
+            background-color: #ffc107;
+
+            color: white;
+        }
+
+        .delete-button {
+            background-color: #dc3545;
+
+            color: white;
+        }
+
+        .edit-button:hover,
+        .delete-button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container mt-4">
+        <div class="card p-4">
+            <h2 class="text-center text-primary mb-4">EXERCISE</h2>
+
+            <form id="exerciseForm">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Name :</label>
+                        <div class="input-group">
+                            <input type="text" id="name" class="form-control" placeholder="First Name" required>
+                        </div>
+                        <div><small id="nameError" class="error-icon"></small></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Mobile :</label>
+                        <div class="input-group">
+                            <input type="text" id="mobile" class="form-control" placeholder="Enter Phone Number"
+                                required>
+                        </div>
+                        <div><small id="mobileError" class="error-icon"></small></div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Email :</label>
+                        <div class="input-group">
+                            <input type="email" id="email" class="form-control" placeholder="Enter Email" required>
+                        </div>
+                        <div><small id="emailError" class="error-icon"></small></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">College Name :</label>
+                        <div class="input-group">
+                            <input type="text" id="college" class="form-control" placeholder="Enter College Name"
+                                required>
+                        </div>
+                        <div><small id="collegeError" class="error-icon"></small></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">CGPA :</label>
+                        <div class="input-group">
+                            <input type="number" id="cgpa" class="form-control" placeholder="Enter CGPA" required
+                                step="0.1" min="0" max="10">
+                        </div>
+                        <div><small id="cgpaError" class="error-icon"></small></div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Branch Name :</label>
+                        <div class="input-group">
+                            <input type="text" id="branch" class="form-control" placeholder="Enter Branch Name"
+                                required>
+                        </div>
+                        <div><small id="branchError" class="error-icon"></small></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">From to When You Studied :</label>
+                        <div class="input-group">
+                            <input type="date" id="fromDate" class="form-control" required>
+                            <input type="date" id="toDate" class="form-control" required>
+                        </div>
+                        <div><small id="dateError" class="error-icon"></small></div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">State :</label>
+                        <div class="input-group">
+                            <select id="state" class="form-select" required>
+                                <option value="" selected disabled>Select State</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                            </select>
+                        </div>
+                        <div><small id="stateError" class="error-icon"></small></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">City :</label>
+                        <div class="input-group">
+                            <select id="city" class="form-select" required>
+                                <option value="" disabled selected>Select City</option>
+                            </select>
+                        </div>
+                        <div><small id="cityError" class="error-icon"></small></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Zip :</label>
+                        <div class="input-group">
+                            <input type="text" id="zip" class="form-control" placeholder="Enter Zip" required>
+                        </div>
+                        <div><small id="zipError" class="error-icon"></small></div>
+                    </div>
+                </div>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-primary" id="addRowButton">Add Row</button>
+                    <button type="button" class="btn btn-danger" id="exportButton">Export</button>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-center w-100">Upload Your Result Pics in Slider</label>
+                    <input type="file" id="imageUpload" class="form-control mb-3" accept="image/*" multiple>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators" id="carouselIndicators"></div>
+                        <div class="carousel-inner" id="carouselItems"></div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="table-responsive mt-4">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Mobile</th>
+                            <th>Email</th>
+                            <th>College Name</th>
+                            <th>CGPA</th>
+                            <th>Branch Name</th>
+                            <th>From to When You Studied</th>
+                            <th>State</th>
+                            <th>City</th>
+                            <th>Zip</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="./script2.js"></script>
+</body>
+
+</html>
