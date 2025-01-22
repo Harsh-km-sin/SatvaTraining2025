@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        input {
+            border: none !important;
+        }
+
+        select {
+            border: none !important;
+        }
+
+        .container {
+            max-width: 1350px !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light p-3">
+    <div class="container">
+        <div class="table-responsive mb-4">
+            <table class="table table-bordered text-center" id="projectTable">
+                <thead class="bg-light">
+                    <tr>
+                        <th>#</th>
+                        <th style="padding-right: 40px;padding-left:40px;">Project Name*</th>
+                        <th>TimeLog*</th>
+                        <th>Phase*</th>
+                        <th>Status*</th>
+                        <th>Logged Hours*</th>
+                        <th>Billable Hours*</th>
+                        <th style="padding-right: 50px;padding-left:50px;">Notes*</th>
+                        <th>Out of Stock</th>
+                        <th class="p-0">BC Link</th>
+                        <th style="padding-left: 1px;">BC <br>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="row g-3 align-items-center justify-content-center">
+            <div class="col-auto">
+                <button class="btn btn-danger" id="deleteRowBtn">Delete Last Row</button>
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" id="rowCountInput" value="1">
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-primary" id="addRowBtn">Add Row</button>
+            </div>
+        </div>
+
+
+        <div class="table-responsive mb-4 mt-5">
+            <table class="table table-dark" id="summaryTable">
+                <thead>
+                    <tr>
+                        <th>SR.No</th>
+                        <th>Project Name</th>
+                        <th>Time/Date</th>
+                        <th>Phases</th>
+                        <th>Status</th>
+                        <th>Logged Hours</th>
+                        <th>Billable Hours</th>
+                        <th>Notes</th>
+                        <th>Out not Stock</th>
+                        <th>BC Link</th>
+                        <th>BC Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
