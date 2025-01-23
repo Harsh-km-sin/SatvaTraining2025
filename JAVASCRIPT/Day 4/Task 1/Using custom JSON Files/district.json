@@ -1,0 +1,38 @@
+[
+  {
+    "id": "LA",
+    "name": "Los Angeles",
+    "stateId": "CA",
+    "countryId": "US"
+  },
+  {
+    "id": "NYC",
+    "name": "New York City",
+    "stateId": "NY",
+    "countryId": "US"
+  },
+  {
+    "id": "MUM",
+    "name": "Mumbai",
+    "stateId": "MAH",
+    "countryId": "IN"
+  },
+  {
+    "id": "GJ",
+    "name": "Gandhinagar",
+    "stateId": "GJ",
+    "countryId": "IN"
+  },
+  {
+    "id": "TOR",
+    "name": "Toronto",
+    "stateId": "ON",
+    "countryId": "CA"
+  },
+  {
+    "id": "SYD",
+    "name": "Sydney",
+    "stateId": "NSW",
+    "countryId": "AU"
+  }
+]

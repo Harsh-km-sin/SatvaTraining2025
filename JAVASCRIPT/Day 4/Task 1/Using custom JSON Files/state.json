@@ -1,0 +1,33 @@
+[
+    {
+      "id": "CA",
+      "name": "California",
+      "countryId": "US"
+    },
+    {
+      "id": "NY",
+      "name": "New York",
+      "countryId": "US"
+    },
+    {
+      "id": "MAH",
+      "name": "Maharashtra",
+      "countryId": "IN"
+    },
+    {
+      "id": "GJ",
+      "name": "Gujarat",
+      "countryId": "IN"
+    },
+    {
+      "id": "ON",
+      "name": "Ontario",
+      "countryId": "CA"
+    },
+    {
+      "id": "NSW",
+      "name": "New South Wales",
+      "countryId": "AU"
+    }
+  ]
+  
