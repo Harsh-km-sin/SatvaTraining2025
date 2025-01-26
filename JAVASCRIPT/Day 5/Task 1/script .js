@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  Swal.fire('Hello, World!');
+
   const addTodoForm = document.getElementById("addTodoForm");
   const todoTableBody = document.getElementById("todoTableBody");
 //   let todoCount = 0;
